@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const tvshowsController_1 = require("../controllers/tvshowsController");
+const router = (0, express_1.Router)();
+router.get('/tvshows', tvshowsController_1.getTvshows);
+router.get('/tvshow', tvshowsController_1.getTvshow);
+router.put('/tvshow', tvshowsController_1.updateTvshow);
+router.post('/tvshows', tvshowsController_1.createTvshow);
+router.delete('/tvshow', tvshowsController_1.deleteTvshow);
+exports.default = router;
